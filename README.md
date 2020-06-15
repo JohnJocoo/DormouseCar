@@ -7,9 +7,9 @@ Init submodule with AVR cmake toolchain
     git submodule init
     git submodule update
     
-Configure project with Cmake (use your AVR build tools path instead of /usr/bin)
+Configure project with Cmake (use your AVR build tools path instead of /usr/bin and port on which Arduino is discovered instead of /dev/ttyACM0)
 
-    cmake -DCMAKE_C_COMPILER=/usr/bin/avr-gcc -DCMAKE_CXX_COMPILER=/usr/bin/avr-g++ -DCMAKE_TOOLCHAIN_FILE=/home/anton/Workspace/cmake-avr/generic-gcc-avr.cmake -DAVR_UPLOADTOOL_PORT=/dev/ttyACM0
+    cmake -DCMAKE_C_COMPILER=/usr/bin/avr-gcc -DCMAKE_CXX_COMPILER=/usr/bin/avr-g++ -DCMAKE_TOOLCHAIN_FILE=dormouse_car_project_path/external/cmake-avr/generic-gcc-avr.cmake -DAVR_UPLOADTOOL_PORT=/dev/ttyACM0
 
 Build project
 
