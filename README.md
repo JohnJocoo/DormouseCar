@@ -26,8 +26,13 @@ Upload to car's Arduino Uno
 ### Other cmake options for configuration
 
 AVR_UPLOADTOOL - Uploader program name
+
 AVR_PROGRAMMER - Programmer (avrdude -c ?, ex. arduino)
+
 AVR_MCU        - Microcontroller model
+
 AVR_H_FUSE     - High fuse
+
 AVR_L_FUSE     - Low fuse
+
 MCU_SPEED      - Controller clock speed (Hz)
