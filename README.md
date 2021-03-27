@@ -2,6 +2,13 @@
 Self-driving toy car based on Elegoo Smart Car platform (Arduino Uno)
 
 ## Building
+
+### Prerequisites
+Packets required (Ubuntu Focal)
+
+    apt-get install build-essential git cmake gcc-avr binutils-avr avr-libc gdb-avr avrdude libusb-dev
+
+### Configure
 Init submodule with AVR cmake toolchain
 
     git submodule init
@@ -11,6 +18,7 @@ Configure project with Cmake (use your AVR build tools path instead of /usr/bin 
 
     cmake -DCMAKE_C_COMPILER=/usr/bin/avr-gcc -DCMAKE_CXX_COMPILER=/usr/bin/avr-g++ -DCMAKE_TOOLCHAIN_FILE=dormouse_car_project_path/external/cmake-avr/generic-gcc-avr.cmake -DAVR_UPLOADTOOL_PORT=/dev/ttyACM0
 
+### Build
 Build project
 
     cmake --build path_to_build_dir
@@ -19,6 +27,7 @@ Or
 
     cmake --build path_to_build_dir --target dormouse-car-atmega328p.elf
 
+### Flash controller
 Upload to car's Arduino Uno
 
     cmake --build path_to_build_dir --target upload_dormouse-car
